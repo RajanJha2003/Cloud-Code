@@ -1,27 +1,139 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Image from "next/image"; // Importing the Image component
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex w-screen overflow-hidden overscroll-none flex-col h-screen bg-background">
-    <div className="w-full max-w-screen-md px-8 flex flex-col items-center">
-      <h1 className="text-2xl font-medium text-center mt-32">
-        A Collaborative Cloud Code Editor, AI Powered, Auto-Scaling Copilot
-      </h1>
-      <div className="text-muted-foreground mt-4 text-center">
-        Collaborative Cloud Code Editor is virtual box code editing
-        environment with custom AI code autocompletion and real-time
-        collaboration. The infrastructire runs on Docker containers and
-        Kubernetes to scale automatically based on resource consumption.
+    <div className="flex w-screen overflow-hidden flex-col min-h-screen bg-gray-50">
+      
+      {/* Stylish Header Section */}
+      <header className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg">
+        <div className="flex items-center justify-between max-w-screen-md mx-auto px-8 py-4">
+          <div className="text-3xl font-bold text-white">CloudCode</div>
+          <nav className="space-x-6">
+            <Link href="/" className="text-white hover:text-yellow-300 transition duration-200">Home</Link>
+            <Link href="/features" className="text-white hover:text-yellow-300 transition duration-200">Features</Link>
+            <Link href="/about" className="text-white hover:text-yellow-300 transition duration-200">About</Link>
+            <Link href="/sign-up">
+              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition duration-200">
+                Sign Up
+              </Button>
+            </Link>
+          </nav>
+        </div>
+      </header>
+
+      <div className="flex flex-col items-center justify-center w-full max-w-screen-md px-8 mx-auto text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mt-32">
+          Collaborative Cloud Code Editor
+        </h1>
+        <h2 className="text-xl font-semibold text-gray-600 mt-2">
+          AI Powered, Auto-Scaling Copilot
+        </h2>
+        <p className="text-gray-500 mt-4">
+          A virtual box code editing environment with custom AI code autocompletion and real-time collaboration.
+        </p>
+        <div className="mt-8">
+          <Link href={"/sign-up"}>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-200">
+              Go To App
+            </Button>
+          </Link>
+        </div>
       </div>
-      <div className="mt-8 flex space-x-4">
-        <Link href={"/sign-up"}>
-          <Button>Go To App</Button>
-        </Link>
+
+      {/* Image Banner */}
+      <div className="relative w-full mt-12 aspect-video max-w-screen-md mx-auto">
+        <Image
+          src="/banner.jpg" // Path to your image in the public folder
+          alt="Collaborative Cloud Code Editor"
+          layout="responsive" // This makes the image responsive
+          width={800} // Set a width
+          height={200} // Set a height
+          className="rounded-lg shadow-lg" // Optional styling
+        />
       </div>
-      <div className="w-full rounded-lg bg-neutral-800 mt-12 aspect-video" />
+
+      {/* Testimonials Section */}
+     {/* Testimonials Section */}
+<div className="w-full max-w-screen-lg px-8 mt-24 mx-auto bg-gray-100 rounded-lg shadow-lg p-8">
+  <h2 className="text-3xl font-semibold text-gray-800 text-center">What Our Users Say</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    {/* Testimonial Cards */}
+    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">
+      <p className="text-gray-600 italic">"CloudCode has transformed the way our team collaborates on projects. The real-time editing feature is a game changer!"</p>
+      <div className="mt-4 flex items-center">
+        {/* Random Image for User 1 */}
+        <Image 
+          src={`https://picsum.photos/50?random=1`} 
+          alt="User 1" 
+          width={50} 
+          height={50} 
+          className="rounded-full" 
+        />
+        <div className="ml-3">
+          <p className="font-semibold">Alice Johnson</p>
+          <p className="text-gray-500 text-sm">Software Engineer</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">
+      <p className="text-gray-600 italic">"The AI code autocompletion saves me so much time. I can't imagine going back to coding without it!"</p>
+      <div className="mt-4 flex items-center">
+        {/* Random Image for User 2 */}
+        <Image 
+          src={`https://picsum.photos/50?random=2`} 
+          alt="User 2" 
+          width={50} 
+          height={50} 
+          className="rounded-full" 
+        />
+        <div className="ml-3">
+          <p className="font-semibold">Bob Smith</p>
+          <p className="text-gray-500 text-sm">Web Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">
+      <p className="text-gray-600 italic">"I love how easy it is to collaborate with my team. The interface is intuitive and user-friendly!"</p>
+      <div className="mt-4 flex items-center">
+        {/* Random Image for User 3 */}
+        <Image 
+          src={`https://picsum.photos/50?random=3`} 
+          alt="User 3" 
+          width={50} 
+          height={50} 
+          className="rounded-full" 
+        />
+        <div className="ml-3">
+          <p className="font-semibold">Charlie Brown</p>
+          <p className="text-gray-500 text-sm">Project Manager</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">
+      <p className="text-gray-600 italic">"The auto-scaling feature is fantastic! I never have to worry about performance issues." </p>
+      <div className="mt-4 flex items-center">
+        {/* Random Image for User 4 */}
+        <Image 
+          src={`https://picsum.photos/50?random=4`} 
+          alt="User 4" 
+          width={50} 
+          height={50} 
+          className="rounded-full" 
+        />
+        <div className="ml-3">
+          <p className="font-semibold">Dana White</p>
+          <p className="text-gray-500 text-sm">Data Scientist</p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+    </div>
   );
 }
