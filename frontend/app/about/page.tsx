@@ -4,8 +4,8 @@ import { FaCode, FaUsers, FaRocket } from "react-icons/fa"; // Importing icons f
 
 export default function About() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen min-h-screen bg-gray-100">
-
+    <div className="flex flex-col items-center justify-center w-screen min-h-screen bg-gray-100 dark:bg-gray-900">
+      
       {/* Header Section */}
       <header className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg w-full">
         <div className="flex items-center justify-between max-w-screen-md mx-auto px-8 py-4">
@@ -24,17 +24,17 @@ export default function About() {
       </header>
 
       {/* About Overview Section */}
-      <section className="w-full max-w-screen-lg mx-auto text-center p-10 mt-16 bg-white rounded-lg shadow-lg">
-        <h1 className="text-5xl font-bold text-gray-800">About Us</h1>
-        <p className="text-gray-600 mt-4">
+      <section className="w-full max-w-screen-lg mx-auto text-center p-10 mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+        <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">About Us</h1>
+        <p className="text-gray-600 mt-4 dark:text-gray-400">
           At CloudCode, we are transforming the way developers collaborate and code. Our platform is designed to empower teams and enhance productivity.
         </p>
       </section>
 
       {/* Mission Section */}
-      <section className="w-full max-w-screen-lg mx-auto text-center p-10 mt-8 bg-blue-100 rounded-lg shadow-lg">
-        <h2 className="text-4xl font-semibold text-blue-700">Our Mission</h2>
-        <p className="text-gray-700 mt-2">
+      <section className="w-full max-w-screen-lg mx-auto text-center p-10 mt-8 bg-blue-100 dark:bg-blue-900 rounded-lg shadow-lg">
+        <h2 className="text-4xl font-semibold text-blue-700 dark:text-blue-300">Our Mission</h2>
+        <p className="text-gray-700 mt-2 dark:text-gray-300">
           To revolutionize coding through collaboration and innovation, making it accessible and enjoyable for everyone.
         </p>
       </section>
@@ -42,43 +42,43 @@ export default function About() {
       {/* Cards Section */}
       <section className="w-full max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 p-6">
         {/* Card 1 */}
-        <div className="bg-white rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
           <div className="flex items-center justify-center mb-4">
-            <FaCode className="text-blue-500 text-5xl" />
+            <FaCode className="text-blue-500 text-5xl dark:text-blue-300" />
           </div>
-          <h3 className="text-xl font-semibold">Innovative Solutions</h3>
-          <p className="text-gray-600 mt-2">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Innovative Solutions</h3>
+          <p className="text-gray-600 mt-2 dark:text-gray-400">
             We provide cutting-edge tools that enhance the coding experience and foster collaboration.
           </p>
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
           <div className="flex items-center justify-center mb-4">
-            <FaUsers className="text-blue-500 text-5xl" />
+            <FaUsers className="text-blue-500 text-5xl dark:text-blue-300" />
           </div>
-          <h3 className="text-xl font-semibold">Community Driven</h3>
-          <p className="text-gray-600 mt-2">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Community Driven</h3>
+          <p className="text-gray-600 mt-2 dark:text-gray-400">
             Our platform is built with input from developers around the world, ensuring it meets real needs.
           </p>
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
           <div className="flex items-center justify-center mb-4">
-            <FaRocket className="text-blue-500 text-5xl" />
+            <FaRocket className="text-blue-500 text-5xl dark:text-blue-300" />
           </div>
-          <h3 className="text-xl font-semibold">Fast and Efficient</h3>
-          <p className="text-gray-600 mt-2">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Fast and Efficient</h3>
+          <p className="text-gray-600 mt-2 dark:text-gray-400">
             Our tools are designed for speed, allowing you to focus on what really matters: your code.
           </p>
         </div>
       </section>
 
       {/* Join Us Section */}
-      <section className="bg-white w-full max-w-screen-lg mx auto text-center p-10 mt-12 rounded-lg shadow-lg">
-        <h2 className="text-4xl font-semibold text-gray-800">Join Us</h2>
-        <p className="text-gray-600 mt-2">
+      <section className="bg-white dark:bg-gray-800 w-full max-w-screen-lg mx-auto text-center p-10 mt-12 rounded-lg shadow-lg">
+        <h2 className="text-4xl font-semibold text-gray-800 dark:text-gray-200">Join Us</h2>
+        <p className="text-gray-600 mt-2 dark:text-gray-400">
           We are always on the lookout for talented individuals who share our passion for coding and collaboration. 
           If you're interested in joining our team, we would love to hear from you!
         </p>
